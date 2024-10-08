@@ -1,0 +1,7 @@
+**/.github
+**/.venv
+**/.DS_Store
+.dockerignore
+.gitignore
+Dockerfile
+docker-compose.yml
