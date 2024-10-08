@@ -34,7 +34,8 @@ class ConfService:
     # ------------------------------------------------------------------------------------------------
     # PID issuer service URL
     # service_url = "https://preprod.issuer.eudiw.dev:4443/"
-    service_url = "https://issuer.eudiw.dev/"
+#    service_url = "https://issuer.eudiw.dev/"
+    service_url = "https://14b0a149d4b4.ngrok.app/"
     # service_url = "https://127.0.0.1:5000/"
     # service_url = "https://dev.issuer.eudiw.dev/"
 
@@ -45,7 +46,8 @@ class ConfService:
 
     # ------------------------------------------------------------------------------------------------
     # eIDAS Node base href (used in lightrequest)
-    eidasnode_url = "https://preprod.issuer.eudiw.dev/EidasNode/"
+#    eidasnode_url = "https://preprod.issuer.eudiw.dev/EidasNode/"
+    eidasnode_url = "https://14b0a149d4b4.ngrok.app/EidasNode/"
 
     # Number of Tries for login in eidas node
     eidasnode_retry = 3
@@ -55,7 +57,8 @@ class ConfService:
 
     # eIDAS node connector endpoint (for lightrequest)
     eidasnode_lightToken_connectorEndpoint = (
-        "https://issuer.eudiw.dev/EidasNode/SpecificConnectorRequest"
+#        "https://issuer.eudiw.dev/EidasNode/SpecificConnectorRequest"
+        "https://14b0a149d4b4.ngrok.app/EidasNode/SpecificConnectorRequest"
     )
 
     # eIDAS node PID attributes
@@ -271,6 +274,13 @@ class ConfService:
             "validity": qeaa_validity,
             "organization_name": "Test QEAA issuer",
             "namespace": "org.iso.23220.2.photoid.1",
+        },
+        "tno.customID": {
+            "issuing_authority": "customID issuer",
+            "organization_id": pid_organization_id,
+            "validity": qeaa_validity,
+            "organization_name": "customID issuer",
+            "namespace": "tno.customID",
         }
         
     }
@@ -289,6 +299,7 @@ class ConfService:
             "eu.europa.ec.eudi.pseudonym_over18_mdoc",
             "eu.europa.ec.eudi.pseudonym_over18_mdoc_deferred_endpoint",
             "eu.europa.ec.eudi.photoid",
+            "tno.customID",
         ],
     }
 

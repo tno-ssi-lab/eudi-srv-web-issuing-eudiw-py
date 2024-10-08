@@ -56,10 +56,15 @@ class ConfCountries:
         formCountry: {
             "name": "FormEU",
             "pid_url": cfgserv.service_url + "pid/form",
-            "pid_mdoc_privkey": "/etc/eudiw/pid-issuer/privkey/PID-DS-0001_UT.pem",
+            # "pid_mdoc_privkey": "/etc/eudiw/pid-issuer/privkey/PID-DS-0001_UT.pem",
+            "pid_mdoc_privkey": "/etc/eudiw/pid-issuer/privkey/PID-DS-0002.pid-ds-0002.key.pem",
+            # "pid_mdoc_privkey": "/Users/langenkamppn/dev/eu-digital-identity-wallet/eudi-srv-web-issuing-eudiw-py/api_docs/test_tokens/DS-token/PID-DS-0002/PID-DS-0002.pid-ds-0002.key.pem",
             # "pid_mdoc_privkey": 'app\certs\PID-DS-0001_UT.pem',
-            "pid_mdoc_privkey_passwd": None,  # None or bytes
-            "pid_mdoc_cert": "/etc/eudiw/pid-issuer/cert/PID-DS-0001_UT_cert.der",
+            # "pid_mdoc_privkey_passwd": None,  # None or bytes
+            "pid_mdoc_privkey_passwd": b"pid-ds-0002",  # None or bytes
+            # "pid_mdoc_cert": "/etc/eudiw/pid-issuer/cert/PID-DS-0001_UT_cert.der",
+            "pid_mdoc_cert": "/etc/eudiw/pid-issuer/cert/PID-DS-0002.cert.der",
+            # "pid_mdoc_cert": "/Users/langenkamppn/dev/eu-digital-identity-wallet/eudi-srv-web-issuing-eudiw-py/api_docs/test_tokens/DS-token/PID-DS-0002/PID-DS-0002.cert.der",
             "un_distinguishing_sign": "FC",
             "supported_credentials": [
                 "eu.europa.ec.eudi.pid_mdoc",
@@ -70,6 +75,7 @@ class ConfCountries:
                 "eu.europa.ec.eudi.loyalty_mdoc",
                 "eu.europa.ec.eudi.pseudonym_over18_mdoc",
                 "eu.europa.ec.eudi.pseudonym_over18_mdoc_deferred_endpoint",
+                "tno.customID",
             ],
             "dynamic_R2": cfgserv.service_url + "dynamic/form_R2",
         },

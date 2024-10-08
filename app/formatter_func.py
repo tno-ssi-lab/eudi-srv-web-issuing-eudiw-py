@@ -96,6 +96,15 @@ def mdocFormatter(data, doctype, country, device_publickey):
             "issuance_date": data["eu.europa.ec.eudiw.qeaa.1"]["issuance_date"],
             "expiry_date": data["eu.europa.ec.eudiw.qeaa.1"]["expiry_date"],
         }
+    elif doctype == "tno.customID":
+        # validity = {
+        #     "issuance_date": data["tno.customID"]["issuance_date"],
+        #     "expiry_date": data["tno.customID"]["expiry_date"],
+        # }
+        validity = {
+            "issuance_date": '2024-07-03',
+            "expiry_date": '2024-10-08',
+        }
     else:
         first_key = list(data.keys())[0]
         validity = {
